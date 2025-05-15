@@ -58,14 +58,10 @@ def main():
             
             if prediction == 1:
                 st.success("Positive 😊")
-                st.write(f"Confidence: {probability[1]:.2%}")
             else:
                 st.error("Negative 😞")
-                st.write(f"Confidence: {probability[0]:.2%}")
             
-            # Display preprocessed text
-            with st.expander("Preprocessed Text"):
-                st.write(preprocess_text(text_input))
+            
         else:
             st.warning("Please enter a review text")
 
